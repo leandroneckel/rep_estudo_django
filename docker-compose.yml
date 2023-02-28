@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  python:
+    container_name: ct_estudo_django
+    build: ./estudo_django/
+    image: im_estudo_django
+    volumes: 
+      - ./estudo_django:/estudo_django
+    ports:
+      - 8000:8000
+      - 1433:1433
+      - 3000:3000
+    tty: true
