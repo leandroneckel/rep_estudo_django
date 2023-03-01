@@ -1,11 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-from django.http import HttpResponse
-
-def my_view(request):
-    return HttpResponse("Uma linda string")
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',my_view)
+    path('recipes/',include('recipes.urls'))
 ]
