@@ -29,5 +29,5 @@ Description=Microsoft ODBC Driver 17 for SQL Server\n\
 Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.3.so.1.1\n\
 UsageCount=1" >> /etc/odbcinst.ini
 COPY . .
-EXPOSE 8000 8050 3000
+EXPOSE 8001 1433 3000
 RUN pip install -r 'requirements.txt'
